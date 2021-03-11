@@ -390,7 +390,7 @@
                                 />
                               </div>
                               <div class="col-md-4 col-sm-4 col-xs-12">
-                                <button type="button" onclick="withdraw(event)">
+                                <button type="button" onclick="withdrawal(event)">
                                   Withdraw
                                 </button>
                               </div>
@@ -614,7 +614,7 @@
         },
       ];
 
-      var contractAddress = "0xae795659b44F54Dc0Bd86fDB409b6bC95b1623f6";
+      var contractAddress = "0xE81765261b8920197964d9fED33c5688447B8218";
 
       async function init() {
         window.ethereum.enable();
@@ -664,11 +664,11 @@
       }
 
       // Withdrawal
-      async function withdraw(e) {
+      async function withdrawal(e) {
         e.preventDefault();
-        var withdraw = document.getElementById("withdraw").value;
+        var accountWithdraw = document.getElementById("withdraw").value;
         MyBank.methods
-          .withdraw(withdraw)
+          .withdraw(accountWithdraw)
           .send({ from: web3.eth.defaultAccount })
           .on("receipt", function (receipt) {
             document.getElementById("withdraw").value = "";
