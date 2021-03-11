@@ -1,0 +1,715 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <title>Decentralized Banking Application With Blockchain</title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- favicon -->
+    <link rel="shortcut icon" type="image/x-icon" href="img/logo/favicon.ico" />
+
+    <!-- all css here -->
+
+    <!-- bootstrap v3.3.6 css -->
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <!-- owl.carousel css -->
+    <link rel="stylesheet" href="css/owl.carousel.css" />
+    <link rel="stylesheet" href="css/owl.transitions.css" />
+    <!-- Animate css -->
+    <link rel="stylesheet" href="css/animate.css" />
+    <!-- Nice-select css -->
+    <link rel="stylesheet" href="css/nice-select.css" />
+    <!-- meanmenu css -->
+    <link rel="stylesheet" href="css/meanmenu.min.css" />
+    <!-- font-awesome css -->
+    <link rel="stylesheet" href="css/font-awesome.min.css" />
+    <link rel="stylesheet" href="css/themify-icons.css" />
+    <link rel="stylesheet" href="css/flaticon.css" />
+    <!-- magnific css -->
+    <link rel="stylesheet" href="css/magnific.min.css" />
+    <!-- style css -->
+    <link rel="stylesheet" href="css/style.css" />
+    <!-- responsive css -->
+    <link rel="stylesheet" href="css/responsive.css" />
+
+    <!-- modernizr css -->
+    <script src="js/vendor/modernizr-2.8.3.min.js"></script>
+  </head>
+  <body>
+    <!--[if lt IE 8]>
+      <p class="browserupgrade">
+        You are using an <strong>outdated</strong> browser. Please
+        <a href="http://browsehappy.com/">upgrade your browser</a> to improve
+        your experience.
+      </p>
+    <![endif]-->
+
+    <div id="preloader"></div>
+    <!-- Start Header Area -->
+    <header class="header-one">
+      <!-- Start header menu area -->
+      <div id="sticker" class="header-area hidden-xs">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-12 col-sm-12">
+              <div class="row">
+                <!-- logo start -->
+                <div class="col-md-3 col-sm-3">
+                  <div class="logo">
+                    <!-- Brand -->
+                    <a
+                      class="navbar-brand page-scroll s-menu"
+                      href="index.html"
+                    >
+                      CSC 318
+                    </a>
+                  </div>
+                  <!-- logo end -->
+                </div>
+                <div class="col-md-9 col-sm-9">
+                  <!-- mainmenu start -->
+                  <nav class="navbar navbar-default">
+                    <div class="collapse navbar-collapse" id="navbar-example">
+                      <div class="main-menu">
+                        <ul class="nav navbar-nav navbar-right">
+                          <li><a href="index.html">Home</a></li>
+                          <li><a href="dashboard.html">Dashboard</a></li>
+                        </ul>
+                      </div>
+                    </div>
+                  </nav>
+                  <!-- mainmenu end -->
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- End header menu area -->
+      <!-- Start mobile menu area -->
+      <div class="mobile-menu-area hidden-lg hidden-md hidden-sm">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-12">
+              <div class="mobile-menu">
+                <div class="logo">
+                  <a href="index.html" class="s-menu"
+                    > CSC 318 </a>
+                </div>
+                <nav id="dropdown">
+                  <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="dashboard.html">Dashboard</a></li>
+                  </ul>
+                </nav>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- End mobile menu area -->
+    </header>
+    <!-- End Header Area -->
+    <div class="dsahboard-area bg-color area-padding">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12 col-sm-12 col-xs-12">
+            <div class="dashboard-head">
+              <div class="row">
+                <div class="col-md-5 col-sm-3 col-xs-12">
+                  <div class="single-dash-head">
+                    <div class="dashboard-profile">
+                      <div class="profile-content">
+                        <span>My Account Address:</span>
+                        <span
+                          class="pro-name"
+                          id="contractAddressDisplay"
+                          style="font-size: small"
+                        ></span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-3 col-sm-3 col-xs-12">
+                  <div class="single-dash-head">
+                    <div class="dashboard-amount">
+                      <div class="amount-content">
+                        <i class="flaticon-028-money"></i>
+                        <span class="pro-name" id="YourBankBalance"
+                          >Balance: $440</span
+                        >
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-3 col-sm-3 col-xs-12">
+                  <div class="single-dash-head">
+                    <div class="dashboard-amount">
+                      <div class="amount-content">
+                        <i class="flaticon-043-bank-2"></i>
+                        <span class="pro-name" id="YourWalletBalance"></span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-3 col-sm-3 col-xs-12">
+            <aside class="sidebar">
+              <div class="dashboard-side">
+                <ul>
+                  <li class="active">
+                    <a href="#" onclick="openTab(event, 'Dashboard')"
+                      ><i class="ti-dashboard"></i>Dashboard</a
+                    >
+                  </li>
+                  <li>
+                    <a href="#" onclick="openTab(event, 'Deposit')"
+                      ><i class="ti-wallet"></i>Deposit Money</a
+                    >
+                  </li>
+                  <li>
+                    <a href="#" onclick="openTab(event, 'Withdraw')"
+                      ><i class="ti-import"></i>Withdraw Money</a
+                    >
+                  </li>
+                  <li>
+                    <a href="#" onclick="openTab(event, 'Transfer')"
+                      ><i class="ti-new-window"></i>Send Money</a
+                    >
+                  </li>
+                </ul>
+              </div>
+            </aside>
+          </div>
+          <div class="col-md-9 col-sm-9 col-xs-12">
+            <div class="dashboard-content">
+              <div class="row">
+                <div class="col-md-12 col-sm-12 col-xs-12">
+                  <!-- Dashboard -->
+                  <div id="Dashboard" class="tabcontent">
+                    <div class="dashboard-content">
+                      <div class="row">
+                        <div class="col-md-6 col-sm-6 col-xs-12">
+                          <div class="single-curency">
+                            <div class="curency-text">
+                              <span class="c-country">Bank Address:</span>
+                              <span
+                                class="c-money"
+                                id="BankAddress"
+                                style="font-size: small"
+                              ></span>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-md-6 col-sm-6 col-xs-12">
+                          <div class="single-curency">
+                            <div class="curency-text">
+                              <span class="c-country">Bank Balance</span>
+                              <span class="c-money" id="BankBalance"></span>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-md-6 col-sm-6 col-xs-12">
+                          <div class="single-curency">
+                            <div class="curency-text">
+                              <span class="c-country">My Account Address</span>
+                              <span
+                                class="c-money"
+                                id="YourAccountAddress"
+                                style="font-size: small"
+                              ></span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="send-money-form">
+                    <div class="form-text">
+                      <!-- Transfer -->
+                      <div id="Transfer" class="tabcontent">
+                        <h4 class="form-top">Send Money</h4>
+                        <div class="form-inner">
+                          <form action="#">
+                            <div class="row">
+                              <div class="col-md-6 col-sm-6 col-xs-12">
+                                <label for="TransferAmount">Amount</label>
+                                <input
+                                  type="text"
+                                  value="0"
+                                  id="TransferAmount"
+                                  maxlength="18"
+                                />
+                              </div>
+                              <div class="col-md-8 col-sm-8 col-xs-12">
+                                <input
+                                  type="text"
+                                  id="TransferAddress"
+                                  placeholder="Receiver Address"
+                                  maxlength="42"
+                                />
+                              </div>
+                              <div class="col-md-4 col-sm-4 col-xs-12">
+                                <button type="button" onclick="transfer(event)">
+                                  Transfer
+                                </button>
+                              </div>
+                              <div class="col-md-4 col-sm-4 col-xs-12">
+                                <label for="TransferStatus">Status</label>
+                                <input
+                                  type="text"
+                                  readonly
+                                  placeholder="Status"
+                                  id="TransferStatus"
+                                />
+                              </div>
+                              <div class="col-md-4 col-sm-4 col-xs-12">
+                                <label for="TransferBlockNumber"
+                                  >Block Number</label
+                                >
+                                <input
+                                  type="number"
+                                  readonly
+                                  placeholder="Block Number"
+                                  id="TransferBlockNumber"
+                                />
+                              </div>
+                              <div class="col-md-4 col-sm-4 col-xs-12">
+                                <label for="TransferHash">Block Hash</label>
+                                <input
+                                  type="text"
+                                  readonly
+                                  placeholder="Block Hash"
+                                  id="TransferHash"
+                                />
+                              </div>
+                            </div>
+                          </form>
+                        </div>
+                      </div>
+
+                      <!-- Deposit -->
+                      <div id="Deposit" class="tabcontent">
+                        <h4 class="form-top">Deposit Money</h4>
+                        <div class="form-inner">
+                          <form action="#">
+                            <div class="row">
+                              <div class="col-md-6 col-sm-6 col-xs-12">
+                                <label for="accountDeposit">Type Amount</label>
+                                <input
+                                  type="text"
+                                  value="0"
+                                  id="accountDeposit"
+                                />
+                              </div>
+                            </div>
+                            <div class="row">
+                              <div class="col-md-4 col-sm-4 col-xs-12">
+                                <label for="accountDeposit">Status</label>
+                                <input
+                                  type="text"
+                                  readonly
+                                  placeholder="Status"
+                                  id="DepositStatus"
+                                />
+                              </div>
+                              <div class="col-md-4 col-sm-4 col-xs-12">
+                                <label for="accountDeposit">Block Number</label>
+                                <input
+                                  type="number"
+                                  readonly
+                                  placeholder="Block Number"
+                                  id="DepositBlockNumber"
+                                />
+                              </div>
+                              <div class="col-md-4 col-sm-4 col-xs-12">
+                                <label for="accountDeposit">Block Hash</label>
+                                <input
+                                  type="text"
+                                  readonly
+                                  placeholder="Block Hash"
+                                  id="DepositHash"
+                                />
+                              </div>
+                              <div class="col-md-4 col-sm-4 col-xs-12">
+                                <button type="submit" onclick="deposit(event)">
+                                  Deposit
+                                </button>
+                              </div>
+                            </div>
+                          </form>
+                        </div>
+                      </div>
+
+                      <!-- Withdraw  -->
+                      <div id="Withdraw" class="tabcontent">
+                        <h4 class="form-top">Withdraw Money</h4>
+                        <div class="form-inner">
+                          <form action="#">
+                            <div class="row">
+                              <div class="col-md-6 col-sm-6 col-xs-12">
+                                <label for="withdraw">Type Amount</label>
+                                <input type="text" value="0" id="withdraw" />
+                              </div>
+                            </div>
+                            <div class="row">
+                              <div class="col-md-4 col-sm-4 col-xs-12">
+                                <label for="WithdrawStatus">Status</label>
+                                <input
+                                  type="text"
+                                  readonly
+                                  placeholder="Status"
+                                  id="WithdrawStatus"
+                                />
+                              </div>
+                              <div class="col-md-4 col-sm-4 col-xs-12">
+                                <label for="WithdrawBlockNumber"
+                                  >Block Number</label
+                                >
+                                <input
+                                  type="number"
+                                  readonly
+                                  placeholder="Block Number"
+                                  id="WithdrawBlockNumber"
+                                />
+                              </div>
+                              <div class="col-md-4 col-sm-4 col-xs-12">
+                                <label for="WithdrawHash">Block Hash</label>
+                                <input
+                                  type="text"
+                                  readonly
+                                  placeholder="Block Hash"
+                                  id="WithdrawHash"
+                                />
+                              </div>
+                              <div class="col-md-4 col-sm-4 col-xs-12">
+                                <button type="button" onclick="withdraw(event)">
+                                  Withdraw
+                                </button>
+                              </div>
+                            </div>
+                          </form>
+                        </div>
+                      </div>
+                      <!-- End of withdraw -->
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Start footer area -->
+    <footer class="footer-1">
+      <!-- Start footer bottom area -->
+      <div class="footer-area-bottom">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-6 col-sm-6 col-xs-12">
+              <div class="copyright">
+                <p>
+                  Copyright © 2021
+                  <a href="#">CSC318 - Group 1</a> Project
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- End footer bottom area -->
+    </footer>
+    <!-- End footer area -->
+
+    <!-- all js here -->
+
+    <!-- jquery latest version -->
+    <script src="js/vendor/jquery-1.12.4.min.js"></script>
+    <!-- bootstrap js -->
+    <script src="js/bootstrap.min.js"></script>
+    <!-- owl.carousel js -->
+    <script src="js/owl.carousel.min.js"></script>
+    <!-- stellar js -->
+    <script src="js/jquery.stellar.min.js"></script>
+    <!-- magnific js -->
+    <script src="js/magnific.min.js"></script>
+    <!-- Nice-select js -->
+    <script src="js/jquery.nice-select.min.js"></script>
+    <!-- wow js -->
+    <script src="js/wow.min.js"></script>
+    <!-- meanmenu js -->
+    <script src="js/jquery.meanmenu.js"></script>
+    <!-- Form validator js -->
+    <script src="js/form-validator.min.js"></script>
+    <!-- plugins js -->
+    <script src="js/plugins.js"></script>
+    <!-- Web3.js -->
+    <script src="https://cdn.jsdelivr.net/gh/ethereum/web3.js/dist/web3.js"></script>
+    <!-- main js -->
+    <script src="js/main.js"></script>
+
+    <script>
+      function openTab(evt, tabname) {
+        console.log(evt, tabname);
+        // Declare all variables
+        var i, tabcontent, tablinks;
+
+        // Get all elements with class="tabcontent" and hide them
+        tabcontent = document.getElementsByClassName("tabcontent");
+        for (i = 0; i < tabcontent.length; i++) {
+          tabcontent[i].style.display = "none";
+        }
+
+        // Get all elements with class="tablinks" and remove the class "active"
+        tablinks = document.getElementsByClassName("tablinks");
+        for (i = 0; i < tablinks.length; i++) {
+          tablinks[i].className = tablinks[i].className.replace(" active", "");
+        }
+
+        // Show the current tab, and add an "active" class to the button that opened the tab
+        document.getElementById(tabname).style.display = "block";
+        evt.currentTarget.className += " active";
+      }
+
+      if (typeof web3 !== "undefined") {
+        web3 = new Web3(web3.currentProvider);
+      } else {
+        web3 = new Web3(
+          new Web3.providers.HttpProvider(
+            "https://ropsten.infura.io/v3/ec90d7bae8404a7f9aeb09411cc643eb"
+          )
+        );
+      }
+
+      var abi = [
+        {
+          constant: false,
+          inputs: [],
+          name: "deposit",
+          outputs: [],
+          payable: true,
+          stateMutability: "payable",
+          type: "function",
+        },
+        {
+          constant: false,
+          inputs: [
+            {
+              name: "receiver",
+              type: "address",
+            },
+            {
+              name: "amount",
+              type: "uint256",
+            },
+          ],
+          name: "transfer",
+          outputs: [],
+          payable: true,
+          stateMutability: "payable",
+          type: "function",
+        },
+        {
+          constant: false,
+          inputs: [
+            {
+              name: "amount",
+              type: "uint256",
+            },
+          ],
+          name: "withdraw",
+          outputs: [],
+          payable: true,
+          stateMutability: "payable",
+          type: "function",
+        },
+        {
+          inputs: [],
+          payable: false,
+          stateMutability: "nonpayable",
+          type: "constructor",
+        },
+        {
+          constant: true,
+          inputs: [],
+          name: "getBankBalance",
+          outputs: [
+            {
+              name: "",
+              type: "uint256",
+            },
+          ],
+          payable: false,
+          stateMutability: "view",
+          type: "function",
+        },
+        {
+          constant: true,
+          inputs: [],
+          name: "indAddress",
+          outputs: [
+            {
+              name: "",
+              type: "address",
+            },
+          ],
+          payable: false,
+          stateMutability: "view",
+          type: "function",
+        },
+        {
+          constant: true,
+          inputs: [],
+          name: "indBalance",
+          outputs: [
+            {
+              name: "",
+              type: "uint256",
+            },
+          ],
+          payable: false,
+          stateMutability: "view",
+          type: "function",
+        },
+        {
+          constant: true,
+          inputs: [
+            {
+              name: "",
+              type: "address",
+            },
+          ],
+          name: "individualBalances",
+          outputs: [
+            {
+              name: "",
+              type: "uint256",
+            },
+          ],
+          payable: false,
+          stateMutability: "view",
+          type: "function",
+        },
+        {
+          constant: true,
+          inputs: [],
+          name: "owner",
+          outputs: [
+            {
+              name: "",
+              type: "address",
+            },
+          ],
+          payable: false,
+          stateMutability: "view",
+          type: "function",
+        },
+      ];
+
+      var contractAddress = "0xae795659b44F54Dc0Bd86fDB409b6bC95b1623f6";
+
+      async function init() {
+        window.ethereum.enable();
+        web3 = new Web3(window.ethereum);
+        MyBank = await new web3.eth.Contract(abi, contractAddress);
+        var accounts = await web3.eth.getAccounts();
+
+        web3.eth.defaultAccount = accounts[0];
+        document.getElementById("YourAccountAddress").innerHTML =
+          web3.eth.defaultAccount;
+        let ethBal =
+          (await web3.eth.getBalance(web3.eth.defaultAccount)) /
+          Math.pow(10, 18);
+        document.getElementById("YourWalletBalance").innerHTML =
+          ethBal.toPrecision(4) + " ETH";
+        document.getElementById("BankAddress").innerHTML =
+          MyBank.options.address;
+        document.getElementById("contractAddressDisplay").innerHTML =
+          MyBank.options.address;
+        document.getElementById("BankBalance").innerHTML =
+          (await web3.eth.getBalance(MyBank.options.address)) + " Wei";
+
+        MyBank.methods
+          .individualBalances(web3.eth.defaultAccount)
+          .call()
+          .then(function (data) {
+            document.getElementById("YourBankBalance").innerHTML =
+              data + " Wei";
+          });
+      }
+      init();
+
+      // Deposit
+      async function deposit(e) {
+        e.preventDefault();
+        var accountDeposit = document.getElementById("accountDeposit").value;
+        MyBank.methods
+          .deposit()
+          .send({ from: web3.eth.defaultAccount, value: accountDeposit })
+          .on("receipt", function (receipt) {
+            document.getElementById("accountDeposit").value = "";
+            document.getElementById("DepositHash").value = receipt.blockHash;
+            document.getElementById("DepositBlockNumber").value =
+              receipt.blockNumber;
+            document.getElementById("DepositStatus").value = receipt.status;
+          });
+      }
+
+      // Withdrawal
+      async function withdraw(e) {
+        e.preventDefault();
+        var withdraw = document.getElementById("withdraw").value;
+        MyBank.methods
+          .withdraw(withdraw)
+          .send({ from: web3.eth.defaultAccount })
+          .on("receipt", function (receipt) {
+            document.getElementById("withdraw").value = "";
+            document.getElementById("WithdrawHash").value = receipt.blockHash;
+            document.getElementById("WithdrawBlockNumber").value =
+              receipt.blockNumber;
+            document.getElementById("WithdrawStatus").value = receipt.status;
+          });
+      }
+
+      // Transfer
+      async function transfer(e) {
+        e.preventDefault();
+        var TransferAddress = document.getElementById("TransferAddress").value;
+        var TransferAmount = document.getElementById("TransferAmount").value;
+
+        MyBank.methods
+          .transfer(TransferAddress, TransferAmount)
+          .send({ from: web3.eth.defaultAccount })
+          .on("receipt", function (receipt) {
+            document.getElementById("TransferAddress").value = "";
+            document.getElementById("TransferAmount").value = "";
+            document.getElementById("TransferHash").value = receipt.blockHash;
+            document.getElementById("TransferBlockNumber").value =
+              receipt.blockNumber;
+            document.getElementById("TransferStatus").value = receipt.status;
+          });
+      }
+
+      function cleanPadding(bstr) {
+        let len = bstr.length;
+        let i = len;
+        // Count amount of zeroes
+        while (i >= 1) {
+          if (bstr[i - 1] != "0") {
+            break;
+          }
+          i--;
+        }
+        return bstr.substring(0, i);
+      }
+    </script>
+  </body>
+</html>
